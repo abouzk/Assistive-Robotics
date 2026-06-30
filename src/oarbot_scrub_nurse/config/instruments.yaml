@@ -1,0 +1,31 @@
+# config/instruments.yaml
+# Maps ArUco tag IDs to instrument names and grasp offsets
+# offset_z: how far above the tag center to position the gripper (meters)
+
+instruments:
+  0:
+    name: "scalpel"
+    offset_z: 0.05
+  1:
+    name: "tissue_forceps"  
+    offset_z: 0.05
+  2:
+    name: "curved_hemostat"
+    offset_z: 0.06
+  3:
+    name: "needle_holder"
+    offset_z: 0.06
+  4:
+    name: "kelly_hemostat"
+    offset_z: 0.06
+  5:
+    name: "scissors"
+    offset_z: 0.07
+
+# Camera topic (to be updated)
+kinect_rgb_topic: "/rgb/image_raw"
+kinect_depth_topic: "/depth/image_raw"
+
+# ArUco settings
+aruco_dict: "DICT_4X4_50"
+tag_size_meters: 0.05   # 5cm printed tags

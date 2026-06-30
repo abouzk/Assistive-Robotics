@@ -1,0 +1,18 @@
+<!-- launch/scrub_nurse.launch -->
+<launch>
+    <!-- Voice command node -->
+    <node name="voice_command_node"
+          pkg="oarbot_scrub_nurse"
+          type="voice_command_node.py"
+          output="screen"/>
+
+    <!-- ArUco detector node with config -->
+    <node name="aruco_detector_node"
+          pkg="oarbot_scrub_nurse"
+          type="aruco_detector_node.py"
+          output="screen">
+        <!-- Load instrument config -->
+        <rosparam command="load"
+                  file="$(find oarbot_scrub_nurse)/config/instruments.yaml"/>
+    </node>
+</launch>
