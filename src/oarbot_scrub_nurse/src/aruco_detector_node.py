@@ -18,7 +18,7 @@ from cv_bridge import CvBridge
 
 # ---- INSTRUMENT MAP -----------------------------------------
 # Loaded from param server (set by launch file from instruments.yaml)
-# Fallback hardcoded here in case params not loaded
+# Fallback hardcoded here in case params not loaded, can add more instruments
 DEFAULT_INSTRUMENT_MAP = {
     0: "scalpel",
     1: "tissue_forceps",
